@@ -11,6 +11,7 @@ export default function ResetPasswordScreen() {
   const [showPasswordInput, setShowPasswordInput] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
+  // Function to verify if the email exists in the stored user data
   const verifyEmail = async (email: string) => {
     const usersJson = await AsyncStorage.getItem('@user_data');
     if (!usersJson) return false;
@@ -19,6 +20,7 @@ export default function ResetPasswordScreen() {
     return users.some((user: any) => user.email === email);
   };
 
+  // Function to handle the reset password process
   const handleResetPassword = async () => {
     if (!email.trim()) {
       Alert.alert('Erreur', 'Veuillez entrer votre adresse email');
@@ -41,6 +43,7 @@ export default function ResetPasswordScreen() {
     }
   };
 
+  // Function to handle the change of password
   const handleChangePassword = async () => {
     if (!newPassword.trim()) {
       Alert.alert('Erreur', 'Veuillez entrer un nouveau mot de passe');

@@ -1,4 +1,3 @@
-// Utilitaire pour charger et gérer les variables d'environnement
 import Constants from 'expo-constants';
 
 // Afficher les clés disponibles dans Constants pour le diagnostic
