@@ -1,8 +1,36 @@
-# Welcome to your Expo app 👋
+# CinéTrack - Your Movie Companion 🎬
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+CinéTrack is a personal student project built with React Native and Expo. This application serves as a comprehensive movie management platform where users can discover, search, track, and organize their movie experiences.
 
-## Get started
+## What This Application Does
+
+CinéTrack provides a complete movie exploration and management experience:
+
+- **Browse Movies**: Discover trending, currently playing, and upcoming films with high-quality posters and essential information at a glance
+- **Search Functionality**: Find specific movies by title or explore films by genre categories
+- **Detailed Movie Information**: Access comprehensive movie details including:
+  - Synopsis and plot overview
+  - Cast information with character names
+  - User ratings and release year
+  - Similar movie recommendations
+- **Personal Collection Management**:
+  - Keep track of movies you've watched
+  - Save favorite films for quick access
+  - Create custom-themed collections with personalized descriptions
+  - Add/remove movies to/from any collection
+  - Manage collection details (rename, update description)
+- **User Profile System**:
+  - Create and manage your personal account
+  - Secure authentication with email and password
+  - View collection statistics in your profile
+  - Access app settings and preferences
+- **iOS-Inspired User Interface**:
+  - Clean, intuitive navigation with tab-based structure
+  - Native-feeling interactions and animations
+  - Dark theme with blur effects for an immersive experience
+  - Adaptive layouts for different device sizes
+
+## Installation and Setup
 
 1. Install dependencies
 
@@ -10,41 +38,63 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
    npm install
    ```
 
-2. Start the app
+2. Start the application
 
    ```bash
-    npx expo start
+   npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+In the terminal output, you'll find options to open the app in:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- An iOS simulator
+- An Android emulator
+- Expo Go app (by scanning the QR code with your mobile device)
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Documentation
 
-## Get a fresh project
+### Project Structure
 
-When you're ready, run:
+- `app/` - Main application screens and navigation
+  - `(tabs)/` - Tab-based navigation screens (home, search, collections, profile)
+  - `movie/` - Movie detail screens
+  - `collections/` - Collection management screens
+  - `_layout.tsx` - Root navigation configuration
+- `components/` - Reusable UI components
+- `services/` - API integration for movie data
+- `utils/` - Utility functions and helpers
+- `lib/` - Core functionality libraries
+- `assets/` - Static resources like images
+
+### Technologies
+
+- **React Native** - Mobile application framework
+- **Expo** - Development platform and toolchain
+- **TypeScript** - Type safety and improved developer experience
+- **Expo Router** - File-based navigation system
+- **AsyncStorage** - Local data persistence
+- **Axios** - API request management
+- **React Native Safe Area Context** - Safe area management
+- **Expo BlurView** - Native blur effects for iOS-style visuals
+
+### Building for Production
+
+#### For iOS
 
 ```bash
-npm run reset-project
+npx expo run:ios
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+#### For Android
 
-## Learn more
+```bash
+npx expo run:android
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+### Contributing
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Feel free to submit issues or pull requests if you have suggestions or improvements.
 
-## Join the community
+### Learn More
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- [Expo Documentation](https://docs.expo.dev/)
+- [React Native Documentation](https://reactnative.dev/)

@@ -1,8 +1,36 @@
-# Bienvenue sur votre application CinéTrack 👋
+# CinéTrack - Votre Compagnon Cinéma 🎬
 
-Ceci est un projet [Expo](https://expo.dev) créé avec [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+CinéTrack est un projet étudiant personnel développé avec React Native et Expo. Cette application sert de plateforme complète de gestion de films où les utilisateurs peuvent découvrir, rechercher, suivre et organiser leurs expériences cinématographiques.
 
-## Pour commencer
+## Ce Que Fait Cette Application
+
+CinéTrack offre une expérience complète d'exploration et de gestion de films :
+
+- **Navigation de Films** : Découvrez les films tendance, actuellement à l'affiche et à venir avec des affiches de haute qualité et des informations essentielles en un coup d'œil
+- **Fonction de Recherche** : Trouvez des films spécifiques par titre ou explorez des films par catégories de genre
+- **Informations Détaillées sur les Films** : Accédez à des détails complets sur les films, notamment :
+  - Synopsis et aperçu de l'intrigue
+  - Informations sur le casting avec noms des personnages
+  - Notes des utilisateurs et année de sortie
+  - Recommandations de films similaires
+- **Gestion de Collection Personnelle** :
+  - Gardez une trace des films que vous avez regardés
+  - Enregistrez vos films favoris pour un accès rapide
+  - Créez des collections thématiques personnalisées avec descriptions
+  - Ajoutez/supprimez des films à/de n'importe quelle collection
+  - Gérez les détails de collection (renommer, mettre à jour la description)
+- **Système de Profil Utilisateur** :
+  - Créez et gérez votre compte personnel
+  - Authentification sécurisée par email et mot de passe
+  - Visualisez les statistiques de collection dans votre profil
+  - Accédez aux paramètres et préférences de l'application
+- **Interface Utilisateur Inspirée d'iOS** :
+  - Navigation propre et intuitive avec structure par onglets
+  - Interactions et animations à sensation native
+  - Thème sombre avec effets de flou pour une expérience immersive
+  - Mises en page adaptatives pour différentes tailles d'appareils
+
+## Installation et Configuration
 
 1. Installez les dépendances
 
@@ -18,44 +46,55 @@ Ceci est un projet [Expo](https://expo.dev) créé avec [`create-expo-app`](http
 
 Dans la sortie du terminal, vous trouverez des options pour ouvrir l'application dans :
 
-- Un [build de développement](https://docs.expo.dev/develop/development-builds/introduction/)
-- Un [émulateur Android](https://docs.expo.dev/workflow/android-studio-emulator/)
-- Un [simulateur iOS](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), un environnement limité pour tester le développement d'applications avec Expo
+- Un simulateur iOS
+- Un émulateur Android
+- L'application Expo Go (en scannant le QR code avec votre appareil mobile)
 
-Vous pouvez commencer à développer en modifiant les fichiers dans le répertoire **app**. Ce projet utilise le [routage basé sur les fichiers](https://docs.expo.dev/router/introduction).
+## Documentation
 
-## Structure du Projet
+### Structure du Projet
 
-Le projet est organisé comme suit :
+- `app/` - Écrans principaux et navigation
+  - `(tabs)/` - Écrans de navigation par onglets (accueil, recherche, collections, profil)
+  - `movie/` - Écrans de détails des films
+  - `collections/` - Écrans de gestion des collections
+  - `_layout.tsx` - Configuration de la navigation principale
+- `components/` - Composants UI réutilisables
+- `services/` - Intégration API pour les données de films
+- `utils/` - Fonctions utilitaires
+- `lib/` - Bibliothèques de fonctionnalités principales
+- `assets/` - Ressources statiques comme les images
 
-- `app/` : Contient les écrans et la logique de navigation
-  - `(tabs)/` : Configuration des onglets de navigation
-  - `_layout.tsx` : Configuration générale de la navigation
-- `assets/` : Ressources statiques (images, polices)
-- `components/` : Composants réutilisables
-- `hooks/` : Hooks personnalisés
+### Technologies Utilisées
 
-## Fonctionnalités Principales
+- **React Native** - Framework d'applications mobiles
+- **Expo** - Plateforme et outils de développement
+- **TypeScript** - Sécurité de type et amélioration de l'expérience développeur
+- **Expo Router** - Système de navigation basé sur les fichiers
+- **AsyncStorage** - Persistance des données locales
+- **Axios** - Gestion des requêtes API
+- **React Native Safe Area Context** - Gestion des zones sécurisées
+- **Expo BlurView** - Effets de flou natifs pour une esthétique iOS
 
-L'application dispose actuellement de quatre onglets principaux :
+### Construction pour la Production
 
-1. **Accueil** : Page d'accueil principale
-2. **Rechercher** : Fonction de recherche de films
-3. **Ma Liste** : Liste personnelle de films à regarder
-4. **Profil** : Gestion du profil utilisateur
+#### Pour iOS
 
-## Technologies Utilisées
+```bash
+npx expo run:ios
+```
 
-- React Native avec Expo
-- TypeScript pour un typage statique
-- Expo Router pour la navigation
-- Diverses bibliothèques Expo pour les fonctionnalités natives
+#### Pour Android
 
-## En savoir plus
+```bash
+npx expo run:android
+```
 
-Pour en apprendre davantage sur le développement avec Expo, consultez les ressources suivantes :
+### Contribution
 
-- [Documentation Expo](https://docs.expo.dev/) : Apprenez les fondamentaux ou explorez des sujets avancés
-- [Tutoriel Expo](https://docs.expo.dev/tutorial/introduction/) : Suivez un tutoriel pas à pas
-- [Communauté Discord](https://chat.expo.dev) : Rejoignez la communauté des développeurs Expo
+N'hésitez pas à soumettre des problèmes ou des pull requests si vous avez des suggestions ou des améliorations.
+
+### En Savoir Plus
+
+- [Documentation Expo](https://docs.expo.dev/)
+- [Documentation React Native](https://reactnative.dev/)
