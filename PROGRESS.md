@@ -136,6 +136,13 @@
   - Suppression de la structure `/src/app` qui créait des conflits de routage avec `/app`
   - Correction des références à des composants manquants dans les layouts principaux
   - Standardisation de la structure de routage pour suivre les conventions d'Expo Router
+- Sécurisation des clés API et optimisation de la gestion des variables d'environnement
+  - Implémentation d'un système robuste pour la gestion des variables d'environnement
+  - Création d'un utilitaire dédié pour l'accès sécurisé aux clés API
+  - Configuration correcte des paramètres d'authentification pour l'API TMDB
+- Correction des problèmes de clés dupliquées dans les listes React Native
+  - Utilisation de clés uniques pour les éléments de listes dans les composants
+  - Optimisation des performances de rendu pour les listes d'éléments
 
 ### En Cours de Développement
 - Amélioration continue de l'expérience utilisateur
