@@ -1,14 +1,29 @@
 import axios from 'axios';
+import { ENV } from '../utils/env';
 
-const TMDB_API_KEY = 'e785820c735b5217d1dc75dfef33ce75';
-const TMDB_ACCESS_TOKEN = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlNzg1ODIwYzczNWI1MjE3ZDFkYzc1ZGZlZjMzY2U3NSIsIm5iZiI6MTc0MDQzMTUwNC40MTI5OTk5LCJzdWIiOiI2N2JjZTA5MGI0NmNjMzFiMjA2YmRjNmEiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.ID_9EoIRGRrWBf9TQ6Gl0GAk_XDK0dqMFyLB9dippWw';
+// Récupérer les clés API depuis notre utilitaire d'environnement
+const API_KEY = ENV.TMDB_API_KEY;
+const ACCESS_TOKEN = ENV.TMDB_ACCESS_TOKEN;
 
+// Afficher un message de diagnostic détaillé
+console.log(`🎬 TMDB API: Clé API ${API_KEY ? ('trouvée: ' + API_KEY.substring(0, 3) + '...') : 'manquante'}, Token ${ACCESS_TOKEN ? ('trouvé: ' + ACCESS_TOKEN.substring(0, 10) + '...') : 'manquant'}`);
+
+// Afficher un avertissement si les clés sont manquantes
+if (!API_KEY || !ACCESS_TOKEN) {
+  console.warn('⚠️ ATTENTION: Clés API TMDB manquantes. Vérifiez votre fichier .env');
+}
+
+// Créer une instance axios avec les headers d'authentification
 const tmdbApi = axios.create({
   baseURL: 'https://api.themoviedb.org/3',
   headers: {
-    Authorization: `Bearer ${TMDB_ACCESS_TOKEN}`,
+    Authorization: `Bearer ${ACCESS_TOKEN}`,
     'Content-Type': 'application/json',
   },
+  // Ajouter l'api_key à tous les appels comme paramètre par défaut
+  params: {
+    api_key: API_KEY,
+  }
 });
 
 export interface Movie {

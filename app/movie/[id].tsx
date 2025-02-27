@@ -235,8 +235,8 @@ export default function MovieDetailScreen() {
           <View style={styles.section}>
             <ThemedText style={styles.sectionTitle}>Distribution</ThemedText>
             <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.castList}>
-              {cast.map((person) => (
-                <View key={person.id} style={styles.castCard}>
+              {cast.map((person, index) => (
+                <View key={`cast-${person.id}-${index}`} style={styles.castCard}>
                   <Image 
                     source={{ uri: getImageUrl(person.profile_path, 'w185') }} 
                     style={styles.castImage}
@@ -252,9 +252,9 @@ export default function MovieDetailScreen() {
           <View style={styles.section}>
             <ThemedText style={styles.sectionTitle}>Films similaires</ThemedText>
             <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.similarList}>
-              {similarMovies.map((movie) => (
+              {similarMovies.map((movie, index) => (
                 <TouchableOpacity 
-                  key={movie.id} 
+                  key={`similar-${movie.id}-${index}`} 
                   style={styles.similarCard}
                   onPress={() => router.push(`/movie/${movie.id}`)}
                 >

@@ -4,6 +4,7 @@ import { StatusBar } from "expo-status-bar";
 import { ThemeProvider, DarkTheme } from "@react-navigation/native";
 import * as SplashScreen from 'expo-splash-screen';
 import { LogBox } from "react-native";
+import { checkRequiredEnv } from '../utils/env'; // Importer notre utilitaire d'environnement
 
 // Prevent auto-hide of splash screen
 SplashScreen.preventAutoHideAsync().catch(console.warn);
@@ -19,6 +20,12 @@ console.log("🚀 Root layout loading");
 export default function RootLayout() {
   useEffect(() => {
     console.log("🔍 Root layout mounted");
+    
+    // Vérifier les variables d'environnement au démarrage
+    const envOK = checkRequiredEnv();
+    if (!envOK) {
+      console.warn("⚠️ Certaines variables d'environnement sont manquantes. Certaines fonctionnalités pourraient ne pas fonctionner correctement.");
+    }
     
     // Hide splash screen after a delay
     const hideSplash = async () => {
