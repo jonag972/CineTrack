@@ -10,6 +10,7 @@ import { BlurView } from 'expo-blur';
 
 console.log("🚀 Loading Profile screen");
 
+// Component to display user's collections
 const CollectionSection = ({ collections }: { collections: Collection[] }) => (
   <View style={styles.section}>
     <ThemedText style={styles.sectionTitle}>Mes Collections</ThemedText>
@@ -53,6 +54,7 @@ const CollectionSection = ({ collections }: { collections: Collection[] }) => (
   </View>
 );
 
+// Component to display about section
 const AboutSection = ({ title, content, onPress }: { title: string, content: string, onPress: () => void }) => (
   <TouchableOpacity style={styles.aboutCard} onPress={onPress}>
     <Ionicons name="information-circle-outline" size={24} color="#FFFFFF" />

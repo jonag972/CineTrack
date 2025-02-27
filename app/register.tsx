@@ -7,6 +7,7 @@ import { router } from 'expo-router';
 import { registerUser } from '../utils/auth';
 
 export default function RegisterScreen() {
+  // State variables to manage form inputs and loading state
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -14,7 +15,9 @@ export default function RegisterScreen() {
   const [isLoading, setIsLoading] = useState(false);
   const insets = useSafeAreaInsets();
 
+  // Function to handle user registration
   const handleRegister = async () => {
+    // Check if passwords match
     if (password !== confirmPassword) {
       Alert.alert('Erreur', 'Les mots de passe ne correspondent pas');
       return;
@@ -22,8 +25,10 @@ export default function RegisterScreen() {
 
     try {
       setIsLoading(true);
-      const response = await registerUser(email, password, nickname);
+      // Call registerUser function to register the user
+      const response = await registerUser({ email, password, nickname });
       if (response.success) {
+        // Navigate to the main app screen on successful registration
         router.replace('/(tabs)');
       } else {
         Alert.alert('Erreur', response.message);

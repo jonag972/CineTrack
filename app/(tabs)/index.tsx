@@ -3,13 +3,14 @@ import { ThemedText } from '@/components/ThemedText';
 import { useState, useEffect } from 'react';
 import { getGreeting } from '@/utils/greeting';
 import { getTrendingMovies, getNowPlayingMovies, getUpcomingMovies, getImageUrl, Movie, getGenreName } from '@/services/tmdb';
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons } from 'react-native-vector-icons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { BlurView } from 'expo-blur';
 import { router } from 'expo-router';
 
 console.log("🚀 Loading Home screen (Tabs/Index)");
 
+// MovieCard component to display individual movie details
 const MovieCard = ({ movie }: { movie: Movie }) => (
   <TouchableOpacity 
     style={styles.movieCard}
@@ -39,6 +40,7 @@ const MovieCard = ({ movie }: { movie: Movie }) => (
   </TouchableOpacity>
 );
 
+// MovieSection component to display a section of movies
 const MovieSection = ({ title, movies, isLoading }: { title: string, movies: Movie[], isLoading: boolean }) => (
   <View style={styles.section}>
     <ThemedText style={styles.sectionTitle}>{title}</ThemedText>

@@ -51,6 +51,11 @@ const DEFAULT_COLLECTIONS: Collection[] = [
   }
 ];
 
+/**
+ * Initialize the collections by setting default collections if none exist.
+ * This function checks if collections already exist in AsyncStorage.
+ * If not, it sets the default collections.
+ */
 export const initializeCollections = async (): Promise<void> => {
   try {
     const existingCollections = await AsyncStorage.getItem(COLLECTIONS_STORAGE_KEY);
