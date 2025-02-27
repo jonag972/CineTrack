@@ -1,9 +1,9 @@
-import 'dotenv/config';
+import { getEnv } from './utils/env';
 
 // Récupérer les variables d'environnement avec un message de diagnostic
-const tmdbApiKey = process.env.TMDB_API_KEY;
-const tmdbAccessToken = process.env.TMDB_ACCESS_TOKEN;
-const nodeEnv = process.env.NODE_ENV || 'development';
+const tmdbApiKey = getEnv('TMDB_API_KEY');
+const tmdbAccessToken = getEnv('TMDB_ACCESS_TOKEN');
+const nodeEnv = getEnv('NODE_ENV', 'development');
 
 // Afficher des informations sur les variables chargées
 console.log('🌍 app.config.js - Environnement:', {

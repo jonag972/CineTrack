@@ -1,9 +1,9 @@
 import axios from 'axios';
-import { ENV } from '../utils/env';
+import { getEnv } from '../utils/env';
 
 // Récupérer les clés API depuis notre utilitaire d'environnement
-const API_KEY = ENV.TMDB_API_KEY;
-const ACCESS_TOKEN = ENV.TMDB_ACCESS_TOKEN;
+const API_KEY = getEnv('TMDB_API_KEY');
+const ACCESS_TOKEN = getEnv('TMDB_ACCESS_TOKEN');
 
 // Afficher un message de diagnostic détaillé
 console.log(`🎬 TMDB API: Clé API ${API_KEY ? ('trouvée: ' + API_KEY.substring(0, 3) + '...') : 'manquante'}, Token ${ACCESS_TOKEN ? ('trouvé: ' + ACCESS_TOKEN.substring(0, 10) + '...') : 'manquant'}`);
