@@ -132,6 +132,10 @@
 - Amélioration de la gestion des états
 - Suppression des fonctionnalités non utilisées (watchlist)
 - Correction des styles pour correspondre aux guidelines iOS
+- Résolution du problème "unmatched route" causé par des structures de fichiers dupliquées
+  - Suppression de la structure `/src/app` qui créait des conflits de routage avec `/app`
+  - Correction des références à des composants manquants dans les layouts principaux
+  - Standardisation de la structure de routage pour suivre les conventions d'Expo Router
 
 ### En Cours de Développement
 - Amélioration continue de l'expérience utilisateur

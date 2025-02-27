@@ -2,5 +2,6 @@ import { useColorScheme as useNativeColorScheme } from 'react-native';
 
 export function useColorScheme() {
   const colorScheme = useNativeColorScheme();
-  return colorScheme ?? 'light';
+  // Forcer le mode sombre pour l'application
+  return 'dark';
 }
