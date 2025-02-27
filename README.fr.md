@@ -2,6 +2,21 @@
 
 CinéTrack est un projet étudiant personnel développé avec React Native et Expo. Cette application sert de plateforme complète de gestion de films où les utilisateurs peuvent découvrir, rechercher, suivre et organiser leurs expériences cinématographiques.
 
+## App Screenshots
+
+<div align="center">
+  <p float="left">
+    <img src="https://github.com/user-attachments/assets/565137a6-efaa-4b54-99dc-84c660508e5c" width="200" />
+    <img src="https://github.com/user-attachments/assets/9d511b3c-593e-4eb9-8da5-ad5a3f108116" width="200" />
+    <img src="https://github.com/user-attachments/assets/8a03e547-03d5-4ee1-87d1-49e4d8219664" width="200" />
+  </p>
+  <p float="left">
+    <img src="https://github.com/user-attachments/assets/dbe4a395-e3c0-4de8-bd33-350121d33101" width="200" />
+    <img src="https://github.com/user-attachments/assets/fde500e2-f743-4581-8100-d9f3046e5c1e" width="200" />
+    <img src="https://github.com/user-attachments/assets/af7af570-341d-4a6a-9367-b27321d58df3" width="200" />
+  </p>
+</div>
+
 ## Ce Que Fait Cette Application
 
 CinéTrack offre une expérience complète d'exploration et de gestion de films :
